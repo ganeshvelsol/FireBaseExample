@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "376844226812",
+    "firebase_url": "https://sample-c7ecc.firebaseio.com",
+    "project_id": "sample-c7ecc",
+    "storage_bucket": "sample-c7ecc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376844226812:android:d93e1b7964268474",
+        "android_client_info": {
+          "package_name": "velsol.com.firebaseexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376844226812-n6jimcgrfo1vq2eopvvfqqg1i1nb2mp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCnx_OXoYGQNkVL9WUHknDZdqM8A51c44"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
