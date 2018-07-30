@@ -24,6 +24,7 @@ import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -45,6 +46,7 @@ public class GpsPositionGetting extends AppCompatActivity implements GoogleApiCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gps_position_getting);
         lat_long_display=(TextView)findViewById(R.id.lat_long_display);
+        addresses=new ArrayList<>();
         address1=(TextView)findViewById(R.id.address);
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addApi(LocationServices.API)
@@ -142,18 +144,27 @@ public class GpsPositionGetting extends AppCompatActivity implements GoogleApiCl
         //code for converting the latttitude and longitude into address
 
         geocoder = new Geocoder(this, Locale.getDefault());
-        try {
-            addresses = geocoder.getFromLocation(latitude, longitude, 1);
-            address = addresses.get(0).getAddressLine(0);
-            address1.setText("Address is "+address);// If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
+        if (latitude==0 && longitude==0)
+        {
+            Toast.makeText(GpsPositionGetting.this, "enable gps (location )", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            try
+            {
+                addresses = geocoder.getFromLocation(latitude, longitude, 1);
+                address = addresses.get(0).getAddressLine(0);
+                address1.setText("Address is "+address);// If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
 //                    String city = addresses.get(0).getLocality();
 //                    String state = addresses.get(0).getAdminArea();
 //                    String country = addresses.get(0).getCountryName();
 //                    String postalCode = addresses.get(0).getPostalCode();
 //                    String knownName = addresses.get(0).getFeatureName();// Here 1 represent max location result to returned, by documents it recommended 1 to 5
-        } catch (IOException e)
-        {
-            e.printStackTrace();
+            } catch (IOException e)
+            {
+                e.printStackTrace();
+            }
         }
+
     }
 }
