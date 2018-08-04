@@ -176,7 +176,8 @@ public class MainActivity extends AppCompatActivity
         final String image= Base64.encodeToString(img,Base64.DEFAULT);
 
         mAuth.createUserWithEmailAndPassword("samosa@gmail.com",area)
-                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>()
+                {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task)
                     {
@@ -195,6 +196,5 @@ public class MainActivity extends AppCompatActivity
                     }
                 });
         //code is to adding data to firebase database
-
     }
 }
