@@ -26,7 +26,8 @@
         <activity android:name=".locationnouseofmaps.GpsPositionGetting"></activity>
         <activity android:name=".admobs.AddingAdmobs">
         </activity>
-        <activity android:name=".bottomNavigation.BottomSheets">
+        <activity android:name=".bottomNavigation.BottomSheets"></activity>
+        <activity android:name=".paintrelated.SamplePaintings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

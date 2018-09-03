@@ -1,7 +1,9 @@
 package velsol.com.firebaseexample.admobs;
 
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
@@ -22,6 +24,10 @@ public class AddingAdmobs extends AppCompatActivity
         setContentView(R.layout.activity_adding_admobs);
         adView=(AdView)findViewById(R.id.adView);
         //adView.setAdSize(AdSize.BANNER);
+        String android_id = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
+        //String deviceId = md5(android_id).toUpperCase();
+        Log.e("device id=",android_id);
+
         MobileAds.initialize(this,"ca-app-pub-5908983824098948/1426271089");
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
