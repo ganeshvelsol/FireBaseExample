@@ -26,24 +26,27 @@ public class PaintView extends View implements View.OnTouchListener
     public PaintView(Context context)
     {
         super(context);
-
         setFocusable(true);
         setFocusableInTouchMode(true);
         this.setOnTouchListener(this);
         paint.setColor(Color.GREEN);
         paint.setAntiAlias(true);
-        paint.setStrokeWidth(10);
+        paint.setStrokeWidth(15);
         paint.setUnderlineText(true);
         paint.setStrokeJoin(Paint.Join.ROUND);
+
+
     }
 
     @Override
     protected void onDraw(Canvas canvas)
     {
-        for (Point point : points) {
-            canvas.drawCircle(point.x, point.y, 8, paint);
+        for (Point point : points)
+        {
+            canvas.drawCircle(point.x, point.y, 10, paint);
         }
     }
+
 
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent)
@@ -55,7 +58,8 @@ public class PaintView extends View implements View.OnTouchListener
         invalidate();
         return true;
     }
-    class Point {
+    class Point
+    {
         float x, y;
 
         @Override
