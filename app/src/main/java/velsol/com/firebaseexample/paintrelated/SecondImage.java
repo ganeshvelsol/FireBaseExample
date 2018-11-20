@@ -14,7 +14,8 @@ public class SecondImage extends AppCompatActivity {
     ImageView imagesss;
     Bundle b;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_image);
         imagesss=(ImageView)findViewById(R.id.imagesss);

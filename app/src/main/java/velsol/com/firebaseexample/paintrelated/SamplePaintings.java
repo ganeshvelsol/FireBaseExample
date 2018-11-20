@@ -43,9 +43,6 @@ public class SamplePaintings extends AppCompatActivity
         paintView = new PaintView(this);
         setContentView(paintView);
         paintView.requestFocus();
-
-
-
     }
 
     @Override
