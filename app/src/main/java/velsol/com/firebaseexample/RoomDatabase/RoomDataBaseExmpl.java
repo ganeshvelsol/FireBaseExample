@@ -49,6 +49,7 @@ public class RoomDataBaseExmpl extends AppCompatActivity
                 try
                 {
                     rr.userDao().addUser(new User(user_name.getText().toString().trim(),user_email.getText().toString().trim(),user_mobile.getText().toString().trim()));
+                    Toast.makeText(RoomDataBaseExmpl.this, "succesfully data has been inserted ", Toast.LENGTH_SHORT).show();
 
                 }catch (Exception e)
                 {
