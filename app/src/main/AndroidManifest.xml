@@ -27,11 +27,13 @@
         <activity android:name=".admobs.AddingAdmobs" />
         <activity android:name=".bottomNavigation.BottomSheets" />
         <activity android:name=".paintrelated.SamplePaintings">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".paintrelated.PaintSecond" />
         <activity android:name=".schedulealarm.ScheduleAlarmPrctise" />
@@ -43,10 +45,14 @@
 
         <activity android:name=".paintrelated.SecondImage" />
         <activity android:name=".RoomDatabase.RoomDataBaseExmpl">
+        </activity>
+        <activity android:name=".intenttransitions.IntentsTransitions">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 
