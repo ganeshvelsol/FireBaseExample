@@ -17,7 +17,8 @@ public class IntentsTransitions extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intents_transitions);
         first_one=(Button)findViewById(R.id.first_one);
-        first_one.setOnClickListener(new View.OnClickListener() {
+        first_one.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view)
             {

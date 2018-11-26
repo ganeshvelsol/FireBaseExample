@@ -6,14 +6,14 @@
         android:left="4dp">
         <shape
             android:shape="oval">
-            <solid android:color="#4d4d4d" />
+            <solid android:color="#d74d4d4d" />
         </shape>
     </item>
     <item>
         <shape
             android:shape="oval">
             <stroke android:width="2dp"
-                android:color="#4d4d4d"/>
+                android:color="#e51e1e1e"/>
         </shape>
     </item>
 
