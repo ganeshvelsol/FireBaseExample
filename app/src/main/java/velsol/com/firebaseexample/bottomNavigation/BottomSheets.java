@@ -14,7 +14,8 @@ import velsol.com.firebaseexample.R;
 import velsol.com.firebaseexample.fragments.FirstFrag;
 import velsol.com.firebaseexample.fragments.SecondFrag;
 
-public class BottomSheets extends AppCompatActivity {
+public class BottomSheets extends AppCompatActivity
+{
 
     ActionBar act;
     BottomNavigationView bottom;

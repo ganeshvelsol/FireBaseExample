@@ -25,7 +25,13 @@
         <activity android:name=".location.ReadFromFirebase" />
         <activity android:name=".locationnouseofmaps.GpsPositionGetting" />
         <activity android:name=".admobs.AddingAdmobs" />
-        <activity android:name=".bottomNavigation.BottomSheets" />
+        <activity android:name=".bottomNavigation.BottomSheets">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".paintrelated.SamplePaintings">
 
             <!-- <intent-filter> -->
@@ -43,17 +49,24 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".paintrelated.SecondImage" />
-        <activity android:name=".RoomDatabase.RoomDataBaseExmpl">
-        </activity>
-        <activity android:name=".intenttransitions.IntentsTransitions">
+        <service android:name=".MyFbIdService">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
+        </service>
+        <service
+            android:name=".MyFbMsg"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
-        </activity>
+        <activity android:name=".paintrelated.SecondImage" />
+        <activity android:name=".RoomDatabase.RoomDataBaseExmpl" />
+        <activity android:name=".intenttransitions.IntentsTransitions"></activity>
+        <activity android:name=".qrcodescanner.QRCodeScanner"></activity>
     </application>
 
 </manifest>
